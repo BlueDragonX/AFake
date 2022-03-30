@@ -46,7 +46,7 @@ FakeGPIO::FakeGPIO(uint32_t pin_count) {
     pin_modes_ = new uint32_t[pin_count]();
 }
 
-~FakeGPIO() {
+FakeGPIO::~FakeGPIO() {
     delete pin_values_;
     delete pin_modes_;
 }

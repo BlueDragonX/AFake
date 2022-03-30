@@ -41,7 +41,7 @@ class FakeGPIO : public GPIO {
         explicit FakeGPIO(uint32_t pin_count = 32);
 
         // Frees the fake's internal pin storage.
-        ~FakeGPIO();
+        ~FakeGPIO() override;
 
         // Set the pin mode.
         void pinMode(uint32_t dwPin, uint32_t dwMode) override;
