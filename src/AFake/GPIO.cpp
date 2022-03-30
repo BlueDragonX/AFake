@@ -41,4 +41,43 @@ GPIO* GPIO::real() {
     return &real_gpio;
 }
 
+FakeGPIO::FakeGPIO(uint32_t pin_count = 32) {
+    pin_values_ = new uint32_t[pin_count]();
+    pin_modes_ = new uint32_t[pin_count]();
+}
+
+~FakeGPIO() {
+    delete pin_values_;
+    delete pin_modes_;
+}
+
+void FakeGPIO::pinMode(uint32_t dwPin, uint32_t dwMode) {
+    pin_modes_[dwPin] = dwMode;
+}
+
+// Get the set mode for a pin.
+uint32_t FakeGPIO::pinMode(uint32_t dwPin) {
+    return pin_modes_[dwPin]; 
+}
+
+// Read a digital pin value.
+int FakeGPIO::digitalRead(uint32_t ulPin) {
+    return pin_values_[ulPin];
+}
+
+// Write a digital pin value.
+void FakeGPIO::digitalWrite(uint32_t dwPin, uint32_t dwVal) {
+    pin_values_[dwPin] =  dwVal;
+}
+
+// Read an analog pin value.
+uint32_t FakeGPIO::analogRead(uint32_t ulPin) {
+    return pin_values_[ulPin];
+}
+
+// Write an analog pin value.
+void FakeGPIO::analogWrite(uint32_t ulPin, uint32_t ulValue) {
+    pin_values_[ulPin] = ulValue;
+}
+
 }

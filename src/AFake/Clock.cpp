@@ -26,4 +26,16 @@ Clock* Clock::real() {
     return &real_clock;
 }
 
+uint32_t FakeClock::millis() {
+    return millis_;
+}
+
+void FakeClock::delay(uint32_t ms) {
+    millis_ += ms;
+}
+
+void FakeClock::set(uint32_t millis) {
+    millis_ = millis;
+} 
+
 }

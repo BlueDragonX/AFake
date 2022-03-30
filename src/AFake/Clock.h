@@ -21,6 +21,25 @@ class Clock {
         virtual void delay(uint32_t) = 0;
 };
 
+// A fake implementation of Clock. Allows the user to control the current time
+// directly.
+class FakeClock : public Clock {
+    public:
+        FakeClock() : millis_(0) {}
+
+        // Return the current mocked time.
+        uint32_t millis() override;
+
+        // Fake a delay. Advances time by ms and returns immediately.
+        void delay(uint32_t ms) override;
+
+        // Set the clock to a specific time.
+        void set(uint32_t millis);
+
+    private:
+        uint32_t millis_;
+};
+
 }
 
 #endif  // _AFAKE_CLOCK_H_
