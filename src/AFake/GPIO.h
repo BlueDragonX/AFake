@@ -5,7 +5,7 @@
 
 namespace AFake {
 
-// Base GPIO interface. Allows GPIO interaction to be mocked.
+// Base GPIO interface. Allows GPIO interaction to be faked.
 class GPIO {
     public:
         // Return the real GPIO interface.

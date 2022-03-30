@@ -5,7 +5,7 @@
 
 namespace AFake {
 
-// Base clock interface. Allows the clock to be mocked.
+// Base clock interface. Allows the clock to be faked.
 class Clock {
     public:
         // Return a real clock.
@@ -27,7 +27,7 @@ class FakeClock : public Clock {
     public:
         FakeClock() : millis_(0) {}
 
-        // Return the current mocked time.
+        // Return the current fake time.
         uint32_t millis() override;
 
         // Fake a delay. Advances time by ms and returns immediately.
