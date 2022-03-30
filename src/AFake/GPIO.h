@@ -38,7 +38,7 @@ class FakeGPIO : public GPIO {
         // The pin_count arg can be passed to change this if your board has
         // more pins or you want to conserve memory when running tests on an
         // actual board.
-        FakeGPIO(uint32_t pin_count = 32);
+        explicit FakeGPIO(uint32_t pin_count = 32);
 
         // Frees the fake's internal pin storage.
         ~FakeGPIO();

@@ -41,7 +41,7 @@ GPIO* GPIO::real() {
     return &real_gpio;
 }
 
-FakeGPIO::FakeGPIO(uint32_t pin_count = 32) {
+FakeGPIO::FakeGPIO(uint32_t pin_count) {
     pin_values_ = new uint32_t[pin_count]();
     pin_modes_ = new uint32_t[pin_count]();
 }
