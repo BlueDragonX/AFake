@@ -1,6 +1,6 @@
 #include "gpio.h"
 
-namespace AFake {
+namespace Faker {
 namespace {
 
 // Unshadow Arduino functions.

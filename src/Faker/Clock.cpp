@@ -1,6 +1,6 @@
 #include "Clock.h"
 
-namespace AFake {
+namespace Faker {
 namespace {
 
 // Unshadow Arduino functions.

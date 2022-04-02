@@ -3,7 +3,7 @@
 
 #include <Arduino.h>
 
-namespace AFake {
+namespace Faker {
 
 // Base GPIO interface. Allows GPIO interaction to be faked.
 class GPIO {

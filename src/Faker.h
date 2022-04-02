@@ -1,7 +1,7 @@
 #ifndef _AFAKE_H_
 #define _AFAKE_H_
 
-#include <AFake/Clock.h>
-#include <AFake/GPIO.h>
+#include <Faker/Clock.h>
+#include <Faker/GPIO.h>
 
 #endif  // _AFAKE_H_

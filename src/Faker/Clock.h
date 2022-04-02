@@ -3,7 +3,7 @@
 
 #include <Arduino.h>
 
-namespace AFake {
+namespace Faker {
 
 // Base clock interface. Allows the clock to be faked.
 class Clock {
