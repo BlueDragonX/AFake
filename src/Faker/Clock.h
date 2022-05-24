@@ -25,7 +25,7 @@ class Clock {
 // directly.
 class FakeClock : public Clock {
     public:
-        FakeClock() : millis_(0) {}
+        FakeClock(uint32_t millis = 0) : millis_(millis) {}
 
         // Return the current fake time.
         uint32_t millis() override;
